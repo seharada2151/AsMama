@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- meta setting -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Imagetoolbar" content="no" />
+<meta name="viewport" content="width=1200" />
+
+<!-- meta keyword & description -->
+<meta name="description" content="AsMamaは子育てを支援してほしい欲しい人と、支援したい人や事業者との出会いと交流のリアルな場づくりに全国で取り組み、携帯一つで園や学校、ご近所、ママサポと繋がり、ワンコインで子育てを助け合う子育てシェアを運営しています。">
+<meta name="keywords" content="送迎,託児,一時預かり,親子イベント,子育て支援,AsMama,アズママ,ママサポーター,ママサポ"> 
+
+<!-- open graph -->
+<meta property="og:title" content="送迎・保育の安心頼り合い AsMama「子育てシェア」" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="http://asmama.jp/img/icon/snsThumnail.png" />
+<meta property="og:url" content="http://asmama.jp/" />
+<meta property="og:site_name" content="送迎・保育の安心頼り合い AsMama「子育てシェア」" />
+<meta property="og:description" content="AsMamaは子育てを支援してほしい欲しい人と、支援したい人や事業者との出会いと交流のリアルな場づくりに全国で取り組み、携帯一つで園や学校、ご近所、ママサポと繋がり、ワンコインで子育てを助け合う子育てシェアを運営しています。" />
+
+<!-- title canonical -->
+<title>送迎・託児の安心頼り合い AsMama「子育てシェア」</title>
+<link rel="canonical" href="http://asmama.jp/" />
+
+<!-- favicon -->
+<link rel="shortcut icon" href="images2014/favicon.ico" />
+
+<!-- style sheet -->
+<link href="common/css/base.css" rel="stylesheet" type="text/css" />  
+<link href="css2014/index.css" rel="stylesheet" type="text/css" />  
+<link href="common/css/fontSize.css" rel="stylesheet" type="text/css" />  
+
+
+<!-- javascript -->
+<script type="text/javascript" src="js0418/smartRollover.js"></script>
+<script type="text/javascript" src="js0418/jquery.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/jquery.smoothScroll.js"></script>
+
+<script>
+	$(".scroll").smoothScroll();
+	$("#header a").smoothScroll();
+</script>
+
+<script type="text/javascript" language="javascript">
+$(function(){
+	loopanime_start();
+});
+	
+function loopanime_start(){
+	var timerId;
+	var imgNo = 3;				//画像枚数
+	var currentNo = 0;
+	var targetNo = 0;
+	var fspeeds=800;			//切り替え時間
+	
+	//画像にリンクを指定
+	var links = [
+		"https://kosodate-share.asmama.jp/",
+		"https://kosodate-share.asmama.jp/",
+		"https://kosodate-share.asmama.jp/",
+		"https://kosodate-share.asmama.jp/"
+		];
+	//画像のalt
+	var alts = [
+		"利用者の声",
+		"利用者の声",
+		"利用者の声",
+		"利用者の声"
+	];
+	
+	(function(){
+		for(var i=1; i<=imgNo; i++){
+			$('<div id="rImg'+i+'">').appendTo($('#idMainimg01'));
+
+			var img = $('<img>').attr('src','images2014/i0'+i+'.png');//画像パスとファイル名指定
+			img.attr('alt',alts[i-1]);
+			img.load(imgLoaded.call(img, i));
+		}
+	})();
+	
+	function imgLoaded(no){
+		var obj = $('#rImg'+no);
+		obj.children('img').remove();
+		obj.append($(this));
+		$('<a href="'+links[no-1]+'" />').append(this).appendTo(obj);
+		
+		if(no==1) loop();
+	}
+	
+	function loop(){
+		if(currentNo!=0) $('#rImg'+currentNo).fadeOut(fspeeds);
+		
+		if(targetNo==0) currentNo = ++currentNo>imgNo?1:currentNo;
+		else currentNo = targetNo;
+		targetNo = 0;
+		
+		$('#rImg'+currentNo).fadeIn(fspeeds);
+		timerId = setTimeout(loop, 5000)
+	}
+}
+</script>
+
+
+<!-- google analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33006713-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- google analytics -->
+
+<!-- google analytics2 -->
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-33006713-2', 'asmama.jp');
+
+  ga('send', 'pageview');
+
+</script>
+<!-- google analytics2 -->
+
+</head>
+
+<body>
+<!-- ヘッダ -->
+<div id="headerWrapper">
+<div id="header" class="clearfix">
+<div class="left_logo">
+<h1><img src="common/img/contents/logo.gif" alt="AsMama 地域の頼り合い子育てコミュニティ　ママサポ随時募集中！" width="187" height="41" />
+<p>送迎・託児をワンコイン（500円）から頼り合い、親も子も安心・ハッピー！<br />
+地域の子育てネットワーク『子育てシェア』</p>
+</h1>
+</div>
+
+<!-- ソーシャル＆ログイン -->
+<div class="right_block">
+
+<div id="monitor_social_buttons"> 
+<ul class="clearfix"> 
+<li class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-text="http://asmama.jp" data-via="AsMama_tweet" data-lang="ja" data-count="none">ツイート</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li> 
+<li class="facebook"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fasmama.jp&amp;send=false&amp;layout=button_count&amp;width=120&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe></li>
+<li class="mixi"><div data-plugins-type="mixi-favorite" data-service-key="d25ed88ea9400babb811b6a2b08ab7193c1ad85b" data-size="medium" data-href="" data-show-faces="false" data-show-count="false" data-show-comment="true" data-width=""></div><script type="text/javascript">(function(d) {var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true;s.src = '//static.mixi.jp/js/plugins.js#lang=ja';d.getElementsByTagName('head')[0].appendChild(s);})(document);</script></li>  
+    </ul> 
+</div> 
+
+<ul class="login_bt">
+<li><a href="https://kosodate-share.asmama.jp/" target="_blank">新規登録（無料）</a></li>
+<li><a href="https://kosodate-share.asmama.jp/users/sign_in" target="_blank">ログイン</a></li>
+</ul>
+
+</div>
+<!-- ソーシャル＆ログイン// -->
+
+</div>
+</div>
+<!-- ヘッダ// -->
+
+
+<!-- kv -->
+<div id="kvWrapper">
+  <div class="kv">
+    <div class="left_main left" id="idMainimg01">
+      <noscript>
+        <img src="images2014/i01.png" alt="子育てシェア：利用イメージ" width="672" height="372" />
+      </noscript>
+    </div>
+    <div class="right_bt right"><a href="https://kosodate-share.asmama.jp/" target="_blank"><img src="images2014/share_banner_s1.jpg" alt="地域で子育て！ワンコインで頼り合う子育てシェア：送迎・託児をワンコイン（500円）から地域で頼り合えるコミュニティサービス" width="288" height="280" /></a></div>
+    <div class="shareData">
+      <h3>子育てシェア登録者</h3>
+      <p><span class="data">8800</span>人以上！</p>
+      <span class="day">（2014年4月現在）</span> </div>
+  </div>
+</div>
+<!-- kv// -->
+
+
+
+<!-- グローバルナビ -->
+<div id="g_navi">
+<ul>
+<li><a href="#share"><img src="common/img/gm/navi1_s1.gif" alt="子育てシェアとは" width="202" height="70" /></a></li><li><a href="#share"><img src="common/img/gm/navi2_s1.gif" alt="親子交流イベント" width="204" height="70" /></a></li><li><a href="#torikumi"><img src="common/img/gm/navi3_s1.gif" alt="AsMamaの取り組み" width="225" height="70" /></a></li><li><a href="http://asmama.jp/front/recruit/mamasapo/index.html" target="_blank"><img src="common/img/gm/navi4_s1.gif" alt="ママサポとは" width="174" height="70" /></a></li><li><a href="http://asmama.jp/front/recruit/" target="_blank"><img src="common/img/gm/navi5_s1.gif" alt="採用情報" width="155" height="70" /></a></li>
+</ul>
+</div>
+<!-- グローバルナビ// -->
+
+<!-- メイン -->
+<div id="main">
+  <h2 id="torikumi"><img src="images2014/h2.jpg" alt="安心して気兼ねなく子育てを身近な顔見知り同士で頼りあえるよう、オンラインの「子育てシェア」とリアルな親子交流イベントを運営しています。ママサポーターは頼れる人が身近にいない時の救世主です。" width="960" height="189" border="0" usemap="#Map" />
+    <map name="Map" id="Map">
+      <area shape="rect" coords="524,28,657,147" href="#share" alt="子育てシェア" />
+      <area shape="rect" coords="665,60,803,188" href="#event" alt="親子交流イベント" />
+      <area shape="rect" coords="813,8,953,143" href="http://asmama.jp/front/recruit/mamasapo/index.html" target="_blank" alt="強い味方ママサポ" />
+    </map>
+  </h2>
+  <!-- 子育てシェアbox -->
+  <div class="sh_ev_block">
+    <h3 id="share"><img src="images2014/bar_share.jpg" alt="子育てシェア" width="465" height="63" /></h3>
+    <div class="clearfix">
+      <p class="right"><img src="images2014/bar_share_image.jpg" width="105" height="75" /></p>
+      <dl class="left sos_block">
+        <dt class="top_midashi">登録無料！保険適用！1時間ワンコインから。</dt>
+        <dd class="top_text">地域の“つながり”を広げ子育てを気兼ねなく頼りあう。それを可能にするコミュニティサービスです。</dd>
+      </dl>
+    </div>
+    <div class="sh_ev_box">
+      <p class="title">最新の動き（ 解決済案件数 <strong>860件</strong> <span>2014年4月現在</span> ）</p>
+      <div class="sos">
+        <iframe src="sos_iframe.html" height=100% width=100% style="border:0;background:#fff;" scrolling="yes"	align="top" frameborder="0" onload="iFrameHeight()"> この部分は iframe 対応のブラウザで見てください。 </iframe>
+      </div>
+    </div>
+  </div>
+  <!-- 子育てシェアbox// -->
+  <!-- イベントbox -->
+  <div class="sh_ev_block right">
+    <h3 id="event"><img src="images2014/bar_event.jpg" alt="親子交流イベント" width="465" height="63" /></h3>
+    <div class="clearfix">
+      <p class="right"><img src="images2014/bar_event_image.jpg" width="168" height="75" /></p>
+      <dl class="left event">
+        <dt class="top_midashi">親も子どもも楽しめる！お得な情報も。</dt>
+        <dd class="top_text">ママサポーターや身近な親子と出会える場として、様々なイベントを企画しています。</dd>
+      </dl>
+    </div>
+    <div class="sh_ev_box">
+      <p class="title">イベント情報<!--（参加者累計数 <strong>2456人</strong> <span>2014年2月末</span> ）--></p>
+      <div class="sos">
+        <iframe src="event_iframe.html" height=100% width=100% style="border:0;background:#fff;" scrolling="yes"	align="top" frameborder="0" onload="iFrameHeight()"> この部分は iframe 対応のブラウザで見てください。 </iframe>
+      </div>
+    </div>
+  </div>
+  <!-- イベントbox// -->
+  <div class="clear"></div>
+  <!-- 左カラム -->
+  <div id="main_left">
+    <!-- お知らせ -->
+    <h4 class="news"><img src="images2014/bar_news.jpg" alt="お知らせ" width="635" height="44" /></h4>
+   <div class="news_iframe">
+    <div>
+    <iframe src="news_iframe.html" height=100% width=100% style="border:0;background:#fff;" scrolling="yes"	align="top" frameborder="0" onload="iFrameHeight()"> この部分は iframe 対応のブラウザで見てください。 </iframe></div>
+    </div>
+    <!-- お知らせ// -->
+    
+    <!-- AsMamaってこんな会社 -->
+    <div id="about">
+      <h5><img src="images2014/about_title1.gif" alt="AsMamaって こんな会社です！" width="595" height="32" /></h5>
+      
+      <div class="clearfix" style="padding:0 20px;">
+      <div class="left about_text1">
+		<p class="brown_text">誰もが育児も仕事もやりたいことも、思い通りに実現できる社会の仕組みや取り組みを創る。</p>
+          2009年創業以来、通勤不要・時間管理なし・子連れワーク可・成果効果の徹底追及のワークスタイルで全国のメンバーと共に「子どもたちの未来に、（中略）助け合える仕組みを創る」というミッション・ビジョンに向けて躍進中。      
+      </div>
+      <div class="right">
+      <img src="images2014/about_image1.jpg" width="144" height="129" />
+          <p class="link_mini"><a href="http://koda.asmama.jp/" target="_blank">甲田恵子ブログを見る</a></p>
+      </div>
+      </div>
+      
+      
+      <dl class="clearfix">
+        <dt class="about_image_left"><img src="images2014/about_image2.jpg" width="270" height="167" /></dt>
+        <dd class="right about_text2">
+          <p class="brown_text">リアルとオンラインの両方の活動で生まれる安心感を大切にしています。</p>
+          地域で安心して気兼ねなく子育てを頼り合えるようになるために、顔が見えるリアルな親子交流の場づくりとしてイベント企画を。そして顔見知り同士で支援依頼が出来るオンラインの仕組み「子育てシェア」を運営しています。</dd>
+      </dl>
+      <dl class="clearfix">
+        <dt class="about_image_right"><img src="images2014/about_image3.jpg" width="149" height="116" /></dt>
+        <dd class="left about_text1">
+          <p class="brown_text">日本中にいるスタッフをつなげるのはオンライン。</p>
+          日本各地で活動するスタッフたち。顔を合わす事なく、毎日オンラインツールを使って連絡を取り合います。ママのように、パパのように、なりたいと子どもたちが思える社会を創るために、日々邁進中！
+          <p class="link_mini"><a href="http://asmama.jp/front/recruit/" target="_blank">採用情報を見る</a></p>
+        </dd>
+      </dl>
+      
+      <dl class="clearfix">
+        <dt class="about_image_left">
+          <iframe width="270" height="152" src="//www.youtube.com/embed/kU-HyGVcUvE" frameborder="0" allowfullscreen></iframe>
+        </dt>
+        <dd class="right about_text2">
+          <p class="brown_text">AsMama紹介ムービーができました！</p>
+          どうやって子育てシェアが誕生したのか、どういうときにご利用いただきたいのか。子育てシェアのこと、AsMamaのことがこれをご覧頂ければ丸わかり！</dd>
+      </dl>
+      
+      <h5 style="margin-top:40px;"><img src="images2014/about_title2.gif" alt="AsMamaは多くの方に応援されています！" width="595" height="32" /></h5>
+      <div class="award">
+      <img src="images2014/about_award_title.jpg" alt="受賞歴" width="281" height="54" /><br />
+        <p><img src="images2014/about_award1.jpg" width="282" height="90" /><img src="images2014/about_award2.jpg" width="282" height="90" /></p>
+        <p><img src="images2014/about_award3.jpg" width="282" height="90" /><img src="images2014/about_award4.jpg" width="282" height="90" /></p>
+      </div>
+      
+      <h6>ご支援企業様 一覧</h6>
+      <table width="595" border="0" cellpadding="0" cellspacing="0" class="partner">
+        <tr>
+          <td valign="top">西新井パサージオ<br />
+            イオンモール<br />
+            西武百貨店<br />
+            港南台バーズ<br />
+            ワールドポーターズ<br />
+            伊勢丹<br />
+            ラ・チッタ・デッラ<br />
+            ららぽーと<br />
+            UR賃貸住宅<br />
+            名古屋ハウジングセンター<br />
+            ソニー生命<br />
+            efp株式会社<br />
+            住友不動産<br />
+            楽天マート<br />
+            らでぃっしゅぼーや<br />
+            資生堂<br />
+            ベビーパーク<br />
+            小林住宅工業<br />
+            生活協同組合連合会<br />
+            リスト<br />
+            あびこショッピングプラザ<br />
+湘南モールフィル<br />
+アクアシティお台場<br />
+横浜クイーンズスクエア<br />
+アミュプラザ鹿児島<br />
+
+</td>
+          <td valign="top"> エコプロコート<br />
+            すまい考房<br />
+            自然流の会<br />
+            神奈川牛乳普及協会<br />
+            ティー・フィック<br />
+            ホートク食品<br />
+            森永乳業<br />
+            ＢＯＤＹ　ＬＡＢＯ<br />
+            あいち生協<br />
+            いし田<br />
+            ジャパンフーズ<br />
+            日本公文教育研究会<br />
+            オイシックス<br />
+            ワールド・ファミリー<br />
+            サカイ創建<br />
+            キングジム<br />
+            保険見直し本舗<br />
+            パルシステム<br />
+            アイプラティナ<br />
+            神戸ハーバーランド<br />
+パレマルシェ<br />
+モリタウン<br />
+モラージュ<br />
+ベネッセ<br />
+ステラタウン<br />
+</td>
+          <td valign="top"> ネオ・アート・トラスト<br />
+            アルソア化粧品<br />
+            Leaf ジュニア<br />
+            Goodbye Perioプロジェクト<br />
+            アイセラ<br />
+            インターオオサカ<br />
+            関西ペイント販売<br />
+            NGU<br />
+            イングリッシュアドベンチャー<br />
+            ウオーターダイレクト<br />
+            和光堂<br />
+            ふみこデンタルクリニック<br />
+            東京海上日動あんしん生命<br />
+            他喜不動産販売<br />
+            中原水産<br />
+            キャンパー鹿児島<br />
+            よしどめキッズデンタルランド<br />
+            ライドオン・エクスプレス<br />
+            学研教室<br />
+            楽天（楽天マートはある）<br />
+ユマニテク<br />
+ダスキン<br />
+ナイス<br />
+東急代官山</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td align="right" valign="top">※順不同</td>
+        </tr>
+      </table>
+      <h6>メディア掲載</h6>
+      <p class="media">新聞・テレビ・ネット等、メディア掲載多数！<br />
+        ワンコインで子育てを頼りあう地域ネットワーク子育てシェアは注目されています！</p>
+      <p class="media"><img src="images2014/about_media1.jpg" width="142" height="45" /><img src="images2014/about_media2.jpg" width="142" height="45" /><img src="images2014/about_media3.jpg" width="142" height="45" /><img src="images2014/about_media4.jpg" width="142" height="45" /> </p>
+    </div>
+    <!-- AsMamaってこんな会社// -->
+  </div>
+  <!-- 左カラム// -->
+  
+  <!-- 右カラム -->
+  <div id="main_right">
+    <p class="prTitle"><img src="images2014/bar_pr.jpg" alt="AsMamaキャンペーン＆PR" width="300" height="44" /></p>
+    
+    <!-- banner -->
+    <div id="banner">
+      <ul>
+        <li><a href="http://asmama.jp/fair/" target="_blank"><img src="common/img/bnr/banner_fair.jpg" alt="子育て応援フェア2014" width="300" height="67" /></a></li>
+        <li><a href="http://asmama.jp/labo/" target="_blank"><img src="common/img/bnr/banner_labo.jpg" alt="ベビー＆キッズの集団託児体験教室コソダテ・ラボ" width="300" height="67" /></a></li>
+        <li><a href="import/index.html"><img src="common/img/bnr/banner_import.jpg" alt="子育てシェア 広まっています！" width="300" height="67" /></a></li>
+<li><a href="flyer_dl/index.html"><img src="common/img/bnr/banner_flyer.jpg" alt="チラシを配布・設置してくださる方大募集！" width="300" height="67" /></a></li>
+      </ul>
+    </div>
+    <!-- banner// -->
+    
+    <!-- books -->
+    <div class="books">
+    <dl>
+      <dt><img src="common/img/bnr/book1.jpg" alt="子育ては、頼っていいんです!" width="46" height="63" /></dt>
+      <dd>
+        <p>AsMama書籍</p>
+        <a href="http://asmama.jp/front/event/hakusho111230/" target="_blank">子育ては、頼っていいんです!―つくろう!地域のつながり 共育て共育ち白書</a></dd>
+	</dl></div>
+    
+<div class="books">
+	<dl>
+      <dt><img src="common/img/bnr/book2.jpg" alt="ワンコインの子育てシェアが社会を変える!!: 欲しい子育て支援は自分たちの手で創り出そう" width="46" height="63" /></dt>
+      <dd class="book"><p>AsMama書籍</p>
+        <a href="http://asmama.jp/front/event/book2013/" target="_blank">ワンコインの子育てシェアが社会を変える!!: 欲しい子育て支援は自分たちの手で創り出そう</a></dd>
+      </dl>
+    </div>
+    <!-- books// -->
+    
+    
+    <!-- facebook -->
+    <div id="facebook">
+    <p><img src="images2014/bar_facebook.gif" alt="最新情報や子育てコラムを配信中！" width="300" height="24" /></p>
+      <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FAsMama.Inc%3Fref%3Dhl&amp;width=300&amp;height=590&amp;show_faces=true&amp;colorscheme=light&amp;stream=true&amp;border_color&amp;header=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:590px;" allowtransparency="true"></iframe>
+    </div>
+    <!-- facebook //-->
+    
+    <!-- outsideBanner -->
+    <div id="outsideBanner">
+      <ul>
+        <li><a href="http://koda.asmama.jp/"><img src="common/img/bnr/banner_kodakeiko.gif" alt="AsMama代表ブログ" width="300" height="66" /></a></li>
+        <li><a href="https://twitter.com/AsMama_tweet" target="_blank"><img src="common/img/bnr/banner_twitter.gif" alt="AsMama公式tweet" width="300" height="66" /></a></li>
+        <li><a href="http://ws.formzu.net/fgen/S61732238/" target="_blank"><img src="common/img/bnr/banner_mail.gif" alt="メールマガジン登録" width="300" height="66" /></a></li>
+        <li><a href="http://www.c-mam.co.jp/" target="_blank"><img src="common/img/bnr/banner_carrermam.gif" alt="career mam" width="300" height="82" /></a></li>
+        <li><a href="http://www.kosodate-mama.jp/" target="_blank"><img src="common/img/bnr/banner_01.jpg" alt="" width="300" height="82" /></a></li>
+        <li><a href="http://welfaretec.com/product/babycal.html" target="_blank"><img src="common/img/bnr/banner_02.jpg" alt="" width="300" height="82" /></a></li>
+        <li><a href="http://www.114154.com/" target="_blank"><img src="common/img/bnr/banner_03.jpg" alt="" width="300" height="86" /></a></li>
+        <li><a href="http://www.himmel-rich.com" target="_blank"><img src="common/img/bnr/banner_04.jpg" alt="" width="160" height="90" /></a></li>
+      </ul>
+    </div>
+    <!-- outsideBanner -->
+  </div>
+  <!--右カラム// -->
+</div>
+<!-- メイン// -->
+
+
+
+<!--pageTop -->
+<div class="pageTop"><a href="#header">AsMama 送迎・保育の安心頼り合い トップへ</a></div>
+<!--pageTop// -->
+
+
+<!--footer -->
+<div id="footer_bg">
+<div>
+
+<ul>
+<li><a href="/index.html">ホーム</a></li>
+<li><a href="http://koda.asmama.jp/">代表ブログ</a></li>
+<li><a href="/help.html">よくある質問</a></li>
+</ul>
+
+<ul>
+<li><a href="#share">子育てシェアとは</a></li>
+</ul>
+
+<ul>
+<li><a href="#share">親子交流イベント</a>
+<ul class="under">
+<li><a href="fair/index.html" target="_blank">子育て応援フェア</a></li>
+<li><a href="labo/index.html" target="_blank">コソダテ・ラボ</a></li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li><a href="/index.html#torikumi">AsMamaの取り組み</a></li>
+</ul>
+
+<ul>
+<li><a href="http://asmama.jp/front/recruit/mamasapo/index.html" target="_blank">ママサポとは</a>
+<ul class="under">
+<li><a href="http://asmama.jp/front/recruit/mamasapo/outline.html" target="_blank">募集概要</a></li>
+<li><a href="http://asmama.jp/front/recruit/mamasapo/day.html" target="_blank">とあるママサポの1日</a></li>
+<li><a href="http://asmama.jp/front/recruit/mamasapo/message.html" target="_blank">ママサポからのメッセージ</a></li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li><a href="http://asmama.jp/front/recruit/" target="_blank">スタッフ募集</a>
+<ul class="under">
+<li><a href="http://asmama.jp/front/recruit/boshu/index.html" target="_blank">募集概要</a></li>
+<li><a href="http://asmama.jp/front/recruit/staff/index.html" target="_blank">とあるスタッフの1日</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<!--footer// -->
+
+<!--footerUtl -->
+<div id="footerUtl">
+<ul>
+<li><a href="http://www.asmama.co.jp" target="_blank">運営会社</a></li>
+<li><a href="https://kosodate-share.asmama.jp/sites/user_policy" target="_blank">ご利用規約</a></li>
+<li><a href="https://kosodate-share.asmama.jp/sites/privacy" target="_blank">プライバシーポリシー</a></li>
+<li><a href="http://asmama.jp/front/form/" target="_blank">お問い合わせ</a></li>
+<li><a href="sitemap/index.html">サイトマップ</a></li>
+</ul>
+<address>Copyright&copy; AsMama,Inc. All Rights reserved.</address>
+</div>
+<!--footerUtl -->
+
+
+</body>
+</html>
